@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox minHeight="600.0" minWidth="600.0" prefHeight="600.0" prefWidth="600.0" style="-fx-border-color:black; -fx-background-color:green;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Klient.MainWindow">
+   <children>
+      <HBox prefHeight="150.0" prefWidth="600.0" style="-fx-border-color:black;">
+         <children>
+            <GridPane prefHeight="152.0" prefWidth="408.0" style="-fx-border-color:black;">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="320.0" minWidth="186.0" prefWidth="186.0" />
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="254.0" minWidth="120.0" prefWidth="254.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="150.0" minHeight="40.0" prefHeight="40.0" valignment="CENTER" vgrow="NEVER" />
+                <RowConstraints maxHeight="150.0" minHeight="110.0" prefHeight="110.0" valignment="CENTER" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="275.0" text="Login:" textAlignment="CENTER" textFill="#f2efef">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Label>
+                  <Label fx:id="loginLabel" contentDisplay="CENTER" prefHeight="30.0" prefWidth="49.0" text="Label" textFill="#dacfcf" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="31.0" prefWidth="310.0" text="Zapotrzebowanie:" textFill="#f8efef" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="zapotrzebowanieLabel" text="Kalorie" textFill="#fcfcfc" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <VBox alignment="TOP_CENTER" prefHeight="152.0" prefWidth="254.0" style="-fx-spacing: 20;-fx-border-color:black;">
+               <children>
+                  <Label text="Wybierz Datę" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="datePicker" prefHeight="32.0" prefWidth="100.0" promptText="Wybierz Datę" />
+                  <Button fx:id="dataButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#reload" prefHeight="25.0" prefWidth="105.0" text="Zatwierdź" />
+               </children>
+            </VBox>
+         </children></HBox>
+      <HBox alignment="BOTTOM_CENTER" prefHeight="400.0" prefWidth="600.0" style="-fx-spacing: 25; -fx-border-color:black;">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="200.0" style="-fx-border-color:black;">
+               <children>
+                  <Label text="Aktywności:" textAlignment="CENTER" textFill="black">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="spaloneKalorie" text="Spalone kalorie" textFill="white">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="200.0" style="-fx-border-color:black;">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="64.0" text="Posiłki:" textFill="black">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="zjedzoneKalorie" text="Spożyte kalorie" textFill="#fffefe">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="200.0" style="-fx-border-color:black;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Bilans:" textAlignment="CENTER" textFill="black">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="bilansLabel" text="Bilans" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children></HBox>
+      <HBox alignment="CENTER" cache="true" prefHeight="236.0" prefWidth="600.0" spacing="20.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#nowaAkt" prefHeight="25.0" prefWidth="150.0" text="Dodaj aktywność" />
+                  <Button mnemonicParsing="false" onAction="#usunAkt" prefHeight="25.0" prefWidth="150.0" text="Usuń aktywności" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#nowyPos" prefHeight="25.0" prefWidth="150.0" text="Dodaj posiłek" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <Button mnemonicParsing="false" onAction="#logout" prefHeight="25.0" prefWidth="150.0" text="Wyloguj i zamknij" />
+            </VBox>
+         </children></HBox>
+   </children>
+</VBox>
